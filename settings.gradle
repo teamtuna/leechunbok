@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "leechunbok"
 include ':app'
 include ':easterdev:app'
+include ':robin:app'
+
