@@ -18,3 +18,4 @@ include ':easterdev:app'
 include ':robin:app'
 
 include ':kade:app'
+include ':whaleshark:app'
