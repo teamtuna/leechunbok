@@ -16,5 +16,6 @@ rootProject.name = "leechunbok"
 include ':app'
 include ':easterdev:app'
 include ':robin:app'
-
 include ':noah:app'
+include ':kade:app'
+
