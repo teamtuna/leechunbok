@@ -49,7 +49,7 @@ private fun MemberButtons(
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun NameButtonsPreview() {
+fun MemberButtonsPreview() {
     LeechunbokTheme {
         MemberButtons(members = TunaMember.values())
     }
