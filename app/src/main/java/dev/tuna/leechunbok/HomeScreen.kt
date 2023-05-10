@@ -29,7 +29,7 @@ fun HomeScreen() {
 private fun MemberButtons(
     modifier: Modifier = Modifier,
     members: Array<TunaMember>,
-    onClick: ((TunaMember) -> Unit)? = null
+    onClick: (TunaMember) -> Unit = { }
 ) {
     Column(
         modifier = modifier
@@ -38,7 +38,7 @@ private fun MemberButtons(
     ) {
         members.forEach { member ->
             Button(
-                onClick = { onClick?.invoke(member) },
+                onClick = { onClick(member) },
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(text = member.koreanName)
