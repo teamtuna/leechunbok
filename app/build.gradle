@@ -50,6 +50,7 @@ dependencies {
 
     implementation project(":easterdev:app")
     implementation project(":robin:app")
+    implementation project(":whaleshark:app")
     implementation project(":noah:app")
 
     implementation 'androidx.core:core-ktx:1.8.0'
