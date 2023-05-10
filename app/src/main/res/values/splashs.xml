@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Leechunbok.Starting" parent="Theme.SplashScreen">
+        // 스플래시 화면에 표시될 아이콘을 설정할 수 있습니다.
+        <item name="windowSplashScreenAnimatedIcon">@drawable/tuna</item>
+
+        // 스플래시 화면에 표시될 배경을 설정할 수 있습니다.
+        <item name="windowSplashScreenBackground">#d4cade</item>
+
+        // 스플래시 화면이 종료된 이후 Theme을 설정할 수 있습니다.
+        <item name="postSplashScreenTheme">@style/Theme.Leechunbok</item>
+    </style>
+</resources>
