@@ -20,7 +20,7 @@ dependencies {
     implementation(project(":robin:app"))
     implementation(project(":whaleshark:app"))
     implementation(project(":noah:app"))
-
+implementation(project(":kade:app"))
     implementation("androidx.core:core-ktx:1.8.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
     implementation("androidx.activity:activity-compose:1.5.1")
