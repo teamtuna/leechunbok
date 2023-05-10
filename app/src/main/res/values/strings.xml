@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">leechunbok</string>
+    <string name="name_east_jung">정동진</string>
+    <string name="name_noah">김정우</string>
+    <string name="name_whale_shark">이주영</string>
+    <string name="name_robin">최선일</string>
+    <string name="name_kade">김지훈</string>
 </resources>

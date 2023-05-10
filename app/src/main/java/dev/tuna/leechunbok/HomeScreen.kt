@@ -1,5 +1,6 @@
 package dev.tuna.leechunbok
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -7,6 +8,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.tuna.leechunbok.ui.theme.LeechunbokTheme
@@ -41,7 +43,8 @@ private fun MemberButtons(
                 onClick = { onClick(member) },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text(text = member.koreanName)
+                val userName = stringResource(id = member.nameResource)
+                Text(text = userName)
             }
         }
     }
@@ -55,10 +58,10 @@ fun MemberButtonsPreview() {
     }
 }
 
-enum class TunaMember(val koreanName: String) {
-    EAST_JUNG("정동진"),
-    NOAH("김정우"),
-    JUYOUNG("이주영"),
-    ROBIN("최선일"),
-    KADE("김지훈")
+enum class TunaMember(@StringRes val nameResource: Int) {
+    EAST_JUNG(R.string.name_east_jung),
+    NOAH(R.string.name_noah),
+    JUYOUNG(R.string.name_whale_shark),
+    ROBIN(R.string.name_robin),
+    KADE(R.string.name_kade)
 }
