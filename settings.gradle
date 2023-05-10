@@ -18,4 +18,6 @@ include ':easterdev:app'
 include ':robin:app'
 include ':noah:app'
 include ':kade:app'
+include ':common:resource'
 include ':whaleshark:app'
+
