@@ -9,7 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import dev.tuna.leechunbok.ui.theme.LeechunbokTheme
+import dev.tuna.leechunbok.resource.LeechunbokTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -20,9 +20,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         splashScreen.setKeepOnScreenCondition { splashViewModel.splashLoadingState.value }
         setContent {
-            LeechunbokTheme {
+            dev.tuna.leechunbok.resource.LeechunbokTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
                     HomeScreen()
                 }
             }
