@@ -2,6 +2,7 @@ package dev.tuna.leechunbok
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
@@ -16,14 +17,19 @@ import dev.tuna.leechunbok.resource.LeechunbokTheme
 @Preview(showBackground = true)
 @Composable
 fun HomeScreen() {
-    MemberButtons(members = TunaMember.values()) { member ->
-        when (member) {
-            TunaMember.EAST_JUNG -> {}
-            TunaMember.NOAH -> {}
-            TunaMember.JUYOUNG -> {}
-            TunaMember.ROBIN -> {}
-            TunaMember.KADE -> {}
+    
+    Column (modifier = Modifier.fillMaxSize()){
+        MemberButtons(members = TunaMember.values()) { member ->
+            when (member) {
+                TunaMember.EAST_JUNG -> {}
+                TunaMember.NOAH -> {}
+                TunaMember.JUYOUNG -> {}
+                TunaMember.ROBIN -> {}
+                TunaMember.KADE -> {}
+            }
         }
+        // screen
+
     }
 }
 
