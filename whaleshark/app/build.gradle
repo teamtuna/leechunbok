@@ -3,6 +3,8 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+apply from: "$project.rootDir/compose.gradle"
+
 android {
     namespace 'dev.tuna.leechunbok.whaleshark'
     compileSdk 33
