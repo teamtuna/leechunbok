@@ -14,11 +14,25 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.tuna.leechunbok.resource.LeechunbokTheme
 
+
+sealed class HomeScreen(route: String) {
+    object EAST_JUNG : HomeScreen("EAST_JUNG")
+
+    object NOAH : HomeScreen("NOAH")
+
+    object JUYOUNG : HomeScreen("JUYOUNG")
+
+    object ROBIN : HomeScreen("ROBIN")
+
+    object KADE : HomeScreen("KADE")
+}
+
 @Preview(showBackground = true)
 @Composable
 fun HomeScreen() {
-    
-    Column (modifier = Modifier.fillMaxSize()){
+
+
+    Column(modifier = Modifier.fillMaxSize()) {
         MemberButtons(members = TunaMember.values()) { member ->
             when (member) {
                 TunaMember.EAST_JUNG -> {}
