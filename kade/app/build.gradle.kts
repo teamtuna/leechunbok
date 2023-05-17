@@ -3,6 +3,9 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+// or apply(from = "../compose.gradle")
+apply(from = "${project.rootDir}/compose.gradle")
+
 android {
     namespace = "dev.tuna.leechunbok.kade.app"
     compileSdk = 33
@@ -33,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":common:resource"))
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
