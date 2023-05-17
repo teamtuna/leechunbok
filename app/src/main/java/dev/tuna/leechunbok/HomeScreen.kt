@@ -12,10 +12,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import dev.tuna.leechunbok.resource.LeechunbokTheme
 
 
-sealed class HomeScreen(route: String) {
+sealed class HomeScreen(val route: String) {
     object EAST_JUNG : HomeScreen("EAST_JUNG")
 
     object NOAH : HomeScreen("NOAH")
@@ -31,7 +34,6 @@ sealed class HomeScreen(route: String) {
 @Composable
 fun HomeScreen() {
 
-
     Column(modifier = Modifier.fillMaxSize()) {
         MemberButtons(members = TunaMember.values()) { member ->
             when (member) {
@@ -42,8 +44,30 @@ fun HomeScreen() {
                 TunaMember.KADE -> {}
             }
         }
-        // screen
+        val navController = rememberNavController()
+        NavHost(
+            navController = navController,
+            startDestination = HomeScreen.EAST_JUNG.route
+        ) {
+            composable(HomeScreen.EAST_JUNG.route) {
 
+            }
+            composable(HomeScreen.NOAH.route) {
+
+            }
+
+            composable(HomeScreen.JUYOUNG.route) {
+
+            }
+
+            composable(HomeScreen.ROBIN.route) {
+
+            }
+
+            composable(HomeScreen.KADE.route) {
+
+            }
+        }
     }
 }
 
