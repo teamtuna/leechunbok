@@ -1,4 +1,4 @@
-package dev.tuna.leechunbok.ui.theme
+package dev.tuna.leechunbok.resource
 
 import androidx.compose.ui.graphics.Color
 

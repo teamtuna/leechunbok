@@ -16,6 +16,7 @@ android {
 
 dependencies {
 
+    implementation(project(":common:resource"))
     implementation(project(":easterdev:app"))
     implementation(project(":robin:app"))
     implementation(project(":whaleshark:app"))

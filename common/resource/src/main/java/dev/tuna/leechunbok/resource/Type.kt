@@ -1,4 +1,4 @@
-package dev.tuna.leechunbok.ui.theme
+package dev.tuna.leechunbok.resource
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
