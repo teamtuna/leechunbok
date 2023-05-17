@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":common:resource"))
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
