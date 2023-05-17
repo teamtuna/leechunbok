@@ -34,20 +34,32 @@ sealed class HomeScreen(val route: String) {
 @Composable
 fun HomeScreen() {
 
+    val navController = rememberNavController()
+
     Column(modifier = Modifier.fillMaxSize()) {
         MemberButtons(members = TunaMember.values()) { member ->
             when (member) {
-                TunaMember.EAST_JUNG -> {}
-                TunaMember.NOAH -> {}
-                TunaMember.JUYOUNG -> {}
-                TunaMember.ROBIN -> {}
-                TunaMember.KADE -> {}
+                TunaMember.EAST_JUNG -> {
+                    navController.navigate(HomeScreen.EAST_JUNG.route)
+                }
+                TunaMember.NOAH -> {
+                    navController.navigate(HomeScreen.NOAH.route)
+                }
+                TunaMember.JUYOUNG -> {
+                    navController.navigate(HomeScreen.JUYOUNG.route)
+                }
+                TunaMember.ROBIN -> {
+                    navController.navigate(HomeScreen.ROBIN.route)
+                }
+                TunaMember.KADE -> {
+                    navController.navigate(HomeScreen.KADE.route)
+                }
             }
         }
-        val navController = rememberNavController()
+
         NavHost(
             navController = navController,
-            startDestination = HomeScreen.EAST_JUNG.route
+            startDestination = HomeScreen.JUYOUNG.route
         ) {
             composable(HomeScreen.EAST_JUNG.route) {
 
@@ -57,7 +69,7 @@ fun HomeScreen() {
             }
 
             composable(HomeScreen.JUYOUNG.route) {
-
+                WhaleSharkScreen()
             }
 
             composable(HomeScreen.ROBIN.route) {
