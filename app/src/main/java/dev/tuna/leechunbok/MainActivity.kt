@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         splashScreen.setKeepOnScreenCondition { splashViewModel.splashLoadingState.value }
         setContent {
-            dev.tuna.leechunbok.resource.LeechunbokTheme {
+            LeechunbokTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
