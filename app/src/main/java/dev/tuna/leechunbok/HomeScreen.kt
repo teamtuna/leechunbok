@@ -53,7 +53,7 @@ private fun MemberButtons(
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun MemberButtonsPreview() {
-    dev.tuna.leechunbok.resource.LeechunbokTheme {
+    LeechunbokTheme {
         MemberButtons(members = TunaMember.values())
     }
 }
