@@ -5,12 +5,14 @@ annotation = "1.6.0"
 core = "1.10.0"
 appcompat = "1.6.1"
 activity = "1.6.1"
+core-splashscreen = "1.0.0-beta02"
 fragment = "1.5.7"
 lifecycle = "2.5.1"
 
 material = "1.8.0"
 
 navigation = "2.5.0"
+navigation-compose = "2.4.0-alpha10"
 
 constraintlayout = "2.1.4"
 recyclerview = "1.3.0"
@@ -43,7 +45,9 @@ annotation = { module = "androidx.annotation:annotation", version.ref = "annotat
 core = { module = "androidx.core:core-ktx", version.ref = "core" }
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 activity = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
+core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "core-splashscreen" }
 fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
 lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycle" }
 lifecycle-common-java8 = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "lifecycle" }
