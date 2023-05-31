@@ -12,5 +12,4 @@ android {
 
 dependencies {
     implementation project(":common:resource")
-    testImplementation 'junit:junit:4.13.2'
 }
