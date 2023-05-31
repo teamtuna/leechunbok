@@ -30,6 +30,8 @@ okhttp3 = "4.10.0"
 retrofit2 = "2.9.0"
 glide = "4.15.1"
 
+hilt = "2.46.1"
+
 #https://developer.android.com/jetpack/androidx/releases/compose-compiler#declaring_dependencies
 #https://developer.android.com/jetpack/androidx/releases/compose#versions
 #https://developer.android.com/jetpack/compose/setup#setup-compose
@@ -92,6 +94,11 @@ activity-compose = { module = "androidx.activity:activity-compose", version.ref 
 lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayout-compose" }
 #coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-compose" }
+
+
+hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+hilt-test = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
 
 [plugins]
 
