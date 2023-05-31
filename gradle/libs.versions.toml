@@ -31,6 +31,8 @@ retrofit2 = "2.9.0"
 glide = "4.15.1"
 
 hilt = "2.46.1"
+hiltExt = "1.0.0"
+androidGradlePlugin = "7.3.1"
 
 #https://developer.android.com/jetpack/androidx/releases/compose-compiler#declaring_dependencies
 #https://developer.android.com/jetpack/androidx/releases/compose#versions
@@ -96,11 +98,15 @@ constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayou
 #coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-compose" }
 
 
-hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
-hilt-test = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
+hilt-ext-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltExt" }
 
 [plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
 [bundles]
 navigation = ["navigation.fragment", "navigation.ui"]
