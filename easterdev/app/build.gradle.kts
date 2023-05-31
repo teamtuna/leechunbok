@@ -1,10 +1,11 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    kotlin("kapt")
 }
 
-apply(from = "${project.rootDir}/android.gradle")
-apply(from = "${project.rootDir}/compose.gradle")
+apply(from = "../../android.gradle")
+apply(from = "../../compose.gradle")
 
 android {
     namespace = "dev.tuna.leechunbok.easterdev"
