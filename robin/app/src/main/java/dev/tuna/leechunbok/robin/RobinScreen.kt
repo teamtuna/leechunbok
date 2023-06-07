@@ -11,6 +11,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import dev.tuna.leechunbok.resource.LeechunbokTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -18,13 +19,14 @@ import dev.tuna.leechunbok.resource.LeechunbokTheme
 @Composable
 fun RobinScreen() {
     LeechunbokTheme {
+        val navController = rememberNavController()
         Scaffold(
             topBar = {
                 TopAppBar(
                     title = { Text(text = stringResource(id = R.string.robin_screen_title)) },
                     navigationIcon = {
                         IconButton(onClick = {
-
+                            navController.popBackStack()
                         }) {
                             Icon(
                                 imageVector = Icons.Default.ArrowBack,
