@@ -18,6 +18,8 @@ dependencies {
 
     implementation(libs.activity.compose)
     implementation(libs.lifecycle.viewmodel.compose)
+
+    implementation(libs.coil)
     // UI Tests
     //androidTestImplementation ("androidx.compose.ui:ui-test-junit4")
     //debugImplementation ("androidx.compose.ui:ui-test-manifest")
