@@ -1,5 +1,3 @@
-@file:OptIn(ExperimentalFoundationApi::class)
-
 package dev.tuna.leechunbok.robin
 
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -58,6 +56,7 @@ fun RobinScreen() {
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun RobinComponentTabRow(items: List<String>) {
     val pagerState = rememberPagerState()
