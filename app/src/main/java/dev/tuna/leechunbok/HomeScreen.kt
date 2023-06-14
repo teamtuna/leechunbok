@@ -16,6 +16,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dev.tuna.leechunbok.resource.LeechunbokTheme
+import dev.tuna.leechunbok.robin.RobinScreen
 
 
 sealed class HomeScreen(val route: String) {
@@ -73,7 +74,7 @@ fun HomeScreen() {
             }
 
             composable(HomeScreen.ROBIN.route) {
-
+                RobinScreen()
             }
 
             composable(HomeScreen.KADE.route) {
