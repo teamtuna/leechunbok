@@ -15,6 +15,9 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import dev.tuna.leechunbok.easterdev.EastarScreen
+import dev.tuna.leechunbok.kade.app.KadeScreen
+import dev.tuna.leechunbok.noah.NoahScreen
 import dev.tuna.leechunbok.resource.LeechunbokTheme
 import dev.tuna.leechunbok.robin.RobinScreen
 
@@ -43,15 +46,19 @@ fun HomeScreen() {
                 TunaMember.EAST_JUNG -> {
                     navController.navigate(HomeScreen.EAST_JUNG.route)
                 }
+
                 TunaMember.NOAH -> {
                     navController.navigate(HomeScreen.NOAH.route)
                 }
+
                 TunaMember.JUYOUNG -> {
                     navController.navigate(HomeScreen.JUYOUNG.route)
                 }
+
                 TunaMember.ROBIN -> {
                     navController.navigate(HomeScreen.ROBIN.route)
                 }
+
                 TunaMember.KADE -> {
                     navController.navigate(HomeScreen.KADE.route)
                 }
@@ -63,10 +70,10 @@ fun HomeScreen() {
             startDestination = HomeScreen.JUYOUNG.route
         ) {
             composable(HomeScreen.EAST_JUNG.route) {
-
+                EastarScreen()
             }
             composable(HomeScreen.NOAH.route) {
-
+                NoahScreen()
             }
 
             composable(HomeScreen.JUYOUNG.route) {
@@ -78,7 +85,7 @@ fun HomeScreen() {
             }
 
             composable(HomeScreen.KADE.route) {
-
+                KadeScreen()
             }
         }
     }
