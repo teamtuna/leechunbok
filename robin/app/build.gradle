@@ -12,4 +12,6 @@ android {
 
 dependencies {
     implementation project(":common:resource")
+
+    implementation(libs.navigation.compose)
 }
