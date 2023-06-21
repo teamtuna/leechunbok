@@ -34,6 +34,8 @@ hilt = "2.46.1"
 hiltExt = "1.0.0"
 androidGradlePlugin = "7.3.1"
 
+coil = "2.4.0"
+
 #https://developer.android.com/jetpack/androidx/releases/compose-compiler#declaring_dependencies
 #https://developer.android.com/jetpack/androidx/releases/compose#versions
 #https://developer.android.com/jetpack/compose/setup#setup-compose
@@ -97,6 +99,8 @@ compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
 lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayout-compose" }
+coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+
 accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "accompanist" }
 accompanist-insets-ui = { module = "com.google.accompanist:accompanist-insets-ui", version.ref = "accompanist" }
 accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
@@ -105,8 +109,6 @@ accompanist-theme-core = { module = "com.google.accompanist:accompanist-themeada
 accompanist-permissions= { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanist" }
 accompanist-navigation-material = { module = "com.google.accompanist:accompanist-navigation-material", version.ref = "accompanist" }
 accompanist-navigation-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanist" }
-#coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-compose" }
-
 
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
