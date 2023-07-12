@@ -23,6 +23,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import dev.tuna.leechunbok.resource.LeechunbokTheme
 import kotlinx.coroutines.launch
@@ -30,9 +32,8 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showBackground = true)
 @Composable
-fun RobinScreen() {
+fun RobinScreen(navController: NavHostController) {
     LeechunbokTheme {
-        val navController = rememberNavController()
         Scaffold(
             topBar = {
                 TopAppBar(
