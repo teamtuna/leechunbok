@@ -1,0 +1,30 @@
+name: Unit tests
+
+on:
+  pull_request:
+    branches:
+      - '**'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [ webhook-unit-tests ]
+  workflow_call:
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: '11'
+
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Run Unit Tests
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: --no-daemon --no-configuration-cache assembleDebugUnitTest
