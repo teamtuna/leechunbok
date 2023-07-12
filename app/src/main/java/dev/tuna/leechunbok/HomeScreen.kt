@@ -61,7 +61,7 @@ fun HomeScreen() {
         }
 
         composable(HomeScreen.ROBIN.route) {
-            RobinScreen()
+            RobinScreen(navController)
         }
 
         composable(HomeScreen.KADE.route) {
