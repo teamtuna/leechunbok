@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="robin_screen_title">Compose Components</string>
-
+    <string name="button_component_title">Buttons</string>
 </resources>
