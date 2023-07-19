@@ -1,9 +1,9 @@
 package dev.tuna.leechunbok.robin
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
@@ -20,17 +20,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
 import dev.tuna.leechunbok.resource.LeechunbokTheme
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview(showBackground = true)
 @Composable
 fun RobinScreen(navController: NavHostController) {
     LeechunbokTheme {
@@ -51,7 +46,9 @@ fun RobinScreen(navController: NavHostController) {
                 )
             }) { padding ->
             Column(Modifier.padding(padding)) {
-                RobinComponentTabRow(listOf("Tab1", "Tab2", "Tab3"))
+                RobinComponentTabRow(Component.values().map {
+                    stringResource(id = it.title)
+                })
             }
         }
     }
@@ -78,11 +75,28 @@ fun RobinComponentTabRow(items: List<String>) {
     }
 
     HorizontalPager(pageCount = items.size, state = pagerState) { page ->
-        Text(
-            modifier = Modifier.wrapContentSize(),
-            text = page.toString(),
-            textAlign = TextAlign.Center,
-            fontSize = 30.sp
-        )
+        Component.values()[page].screen()
     }
+}
+
+enum class Component(
+    @StringRes val title: Int,
+    val screen: @Composable () -> Unit,
+) {
+    BUTTON(
+        title = R.string.button_component_title,
+        screen = { ButtonComponentScreen() }
+    ),
+    DUMMY(
+        title = R.string.robin_screen_title,
+        screen = {
+            Text(text = "Dummy")
+        }
+    ),
+    DUMMY2(
+        title = R.string.robin_screen_title,
+        screen = {
+            Text(text = "Dummy2")
+        }
+    )
 }
